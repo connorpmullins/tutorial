@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import {View} from 'react-native';
+import {ScrollView} from 'react-native';
 import axios from 'axios';
 import AlbumDetail from './AlbumDetail';
 
-//This component is what album detail wwill be nested inside
+//This component is what AlbumDetail will be nested inside
 /*It sits below the header*/
 class AlbumList extends Component {
 	state = {albums: [] };
@@ -25,9 +25,9 @@ renderAlbums () {
 		console.log(this.state);
 
 		return (
-			<View>
+			<ScrollView>
 				{this.renderAlbums()}
-			</View>
+			</ScrollView>
 		);
 	}
 }
